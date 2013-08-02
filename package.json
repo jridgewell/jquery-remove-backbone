@@ -1,6 +1,6 @@
 {
     "name": "jquery-remove-backbone",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Remove your Backbone views when you remove it's root element",
     "main": "lib/jquery-remove-backbone.js",
     "scripts": {

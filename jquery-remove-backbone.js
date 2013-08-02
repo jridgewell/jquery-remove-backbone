@@ -16,8 +16,8 @@ testElement.on('remove', function() {
 testElement.remove();
 
 if (_cleanData) {
-    // $.cleanData() is a jQuery helper that
-    // #empty(), #html(), and #remove() will once.
+    // $.cleanData() is a jQuery helper that #empty(),
+    // #html(), and #remove() will call once.
     // Wrap it, and fire the 'remove' event.
     $.cleanData = function(elems) {
         _.each(elems, function(elem) {
@@ -48,11 +48,10 @@ Backbone.View.prototype.delegateEvents = function() {
 };
 
 
-    if (typeof exports !== 'undefined') {
-        exports.Backbone = Backbone;
-        exports.jQuery = jQuery;
-    } else {
-        root.Backbone = Backbone;
-        root.jQuery = jQuery;
+    if (typeof exports === 'undefined') {
+        var exports = root;
     }
+    exports.Backbone = Backbone;
+    exports.jQuery = jQuery;
+
 })(this, _, jQuery, Backbone);
