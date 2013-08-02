@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery-remove-Backbone</title>
+        <link rel="stylesheet" href="support/mocha/mocha.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div id="mocha"></div>
+
+        <script src="support/mocha/mocha.js" type="text/javascript" charset="utf-8"></script>
+        <script src="support/requirejs/require.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- <script src="spec-helpers.js" type="text/javascript" charset="utf-8"></script> -->
+
+        <script type="text/javascript" charset="utf-8">
+            console = window.console || function() {};
+            mocha.setup('bdd');
+
+            // Make sinon clean itself
+            beforeEach(function() {
+                this.sinon = sinon.sandbox.create();
+            });
+            afterEach(function(){
+                this.sinon.restore();
+            });
+
+            function runMocha() {
+                mocha.run();
+            }
+            require(['config', 'common'], function() {
+                require([
+                    'specs/jquery.cleanData_spec.js',
+                    'specs/backbone.remove_spec.js'
+                ], runMocha);
+            });
+        </script>
+    </body>
+</html>

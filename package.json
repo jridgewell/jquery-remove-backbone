@@ -1,0 +1,32 @@
+{
+    "name": "jquery-remove-backbone",
+    "version": "1.0.0",
+    "description": "Remove your Backbone views when you remove it's root element",
+    "main": "lib/jquery-remove-backbone.js",
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jridgewell/jquery-remove-backbone.git"
+    },
+    "keywords": [
+        "backbone",
+        "jquery"
+    ],
+    "author": "Justin Ridgewell",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jridgewell/jquery-remove-backbone/issues"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "bower": "~1.0.3",
+
+        "grunt": "~0.4.1",
+        "grunt-mocha": "~0.4.0",
+        "grunt-preprocess": "~2.3.0",
+        "grunt-contrib-jshint": "~0.6.2",
+        "grunt-contrib-uglify": "~0.2.2"
+    }
+}
