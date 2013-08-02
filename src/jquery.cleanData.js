@@ -13,8 +13,8 @@ testElement.on('remove', function() {
 testElement.remove();
 
 if (_cleanData) {
-    // $.cleanData() is a jQuery helper that
-    // #empty(), #html(), and #remove() will once.
+    // $.cleanData() is a jQuery helper that #empty(),
+    // #html(), and #remove() will call once.
     // Wrap it, and fire the 'remove' event.
     $.cleanData = function(elems) {
         _.each(elems, function(elem) {
