@@ -18,10 +18,8 @@ if (_cleanData) {
     // Wrap it, and fire the 'remove' event.
     $.cleanData = function(elems) {
         _.each(elems, function(elem) {
-            try {
-                // Fire
-                $(elem).triggerHandler('remove');
-            } catch(e) {}
+            // Fire
+            $(elem).triggerHandler('remove');
         });
 
         // Call the old $.cleanData()
