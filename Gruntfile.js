@@ -7,14 +7,16 @@ module.exports = function(grunt) {
         meta: {
             version: '<%= pkg.version %>',
             banner:
-                '// jQuery-remove-Backbone\n' +
-                '// -------------------\n' +
-                '// v<%= pkg.version %>\n' +
-                '//\n' +
-                '// Copyright (c)<%= grunt.template.today("yyyy") %> Justin Ridgewell\n' +
-                '// Distributed under MIT license\n' +
-                '//\n' +
-                '// https://github.com/jridgewell/jquery-remove-backbone\n' +
+                '/*!\n' +
+                ' * jQuery-remove-Backbone\n' +
+                ' * -------------------\n' +
+                ' * v<%= pkg.version %>\n' +
+                ' *\n' +
+                ' * Copyright (c)<%= grunt.template.today("yyyy") %> Justin Ridgewell\n' +
+                ' * Distributed under MIT license\n' +
+                ' *\n' +
+                ' * https://github.com/jridgewell/jquery-remove-backbone\n' +
+                ' */' +
                 '\n'
         },
 
