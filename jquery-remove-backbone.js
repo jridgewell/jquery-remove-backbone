@@ -20,11 +20,9 @@ if (_cleanData) {
     // #html(), and #remove() will call once.
     // Wrap it, and fire the 'remove' event.
     $.cleanData = function(elems) {
-        _.each(elems, function(elem) {
-            try {
-                // Fire
-                $(elem).triggerHandler('remove');
-            } catch(e) {}
+        $.each(elems, function() {
+            // Fire
+            $(this).triggerHandler('remove');
         });
 
         // Call the old $.cleanData()
@@ -44,7 +42,7 @@ Backbone.View.prototype.delegateEvents = function() {
     // Use ".delegateEvents + this.cid" so Backbone can
     // undelegate the event (without firing) when the
     // view's $el changes.
-    this.$el.on('remove.delegateEvents' + this.cid, _.bind(this.remove, this));
+    this.$el.on('remove.delegateEvents' + this.cid, _.bind(this.stopListening, this));
 };
 
 
