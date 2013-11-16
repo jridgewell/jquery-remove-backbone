@@ -17,9 +17,9 @@ if (_cleanData) {
     // #html(), and #remove() will call once.
     // Wrap it, and fire the 'remove' event.
     $.cleanData = function(elems) {
-        _.each(elems, function(elem) {
+        $.each(elems, function() {
             // Fire
-            $(elem).triggerHandler('remove');
+            $(this).triggerHandler('remove');
         });
 
         // Call the old $.cleanData()
