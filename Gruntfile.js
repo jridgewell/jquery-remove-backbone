@@ -31,11 +31,7 @@ module.exports = function(grunt) {
         uglify : {
             core : {
                 src : 'jquery-remove-backbone.js',
-                dest : 'jquery-remove-backbone.min.js',
-                options : {
-                    sourceMap : 'jquery-remove-backbone.map',
-                    sourceMapPrefix : 1,
-                }
+                dest : 'jquery-remove-backbone.min.js'
             }
         },
 
