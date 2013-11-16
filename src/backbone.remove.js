@@ -10,5 +10,5 @@ Backbone.View.prototype.delegateEvents = function() {
     // Use ".delegateEvents + this.cid" so Backbone can
     // undelegate the event (without firing) when the
     // view's $el changes.
-    this.$el.on('remove.delegateEvents' + this.cid, _.bind(this.remove, this));
+    this.$el.on('remove.delegateEvents' + this.cid, _.bind(this.stopListening, this));
 };

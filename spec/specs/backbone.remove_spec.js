@@ -21,7 +21,7 @@ define(function() {
             });
 
             it("calls #remove() on the 'remove' event", function() {
-                var spy = this.sinon.spy(this.view, 'remove');
+                var spy = this.sinon.spy(this.view, 'stopListening');
                 this.view.delegateEvents();
 
                 this.view.$el.trigger('remove');
